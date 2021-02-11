@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px auto;
+    padding: 0px 0px;
+    z-index: 0;
+    min-width: 100%;
+}
+
+.container {
+    margin: 0px auto;
+    padding-left: 0px;
+    min-width: 95%;
+
+}
