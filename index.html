@@ -13,23 +13,19 @@
 
 <body class="bg-dark">
 
-  <div class="container text-center">
-
+  <div class="container-fluid text-center">
     <div class="row justify-content-center p-4">
-      <h1 class="text-white">GIPHY PARTY</h1>
+      <h1 class="text-white col-12 col-sm-12">GIPHY PARTY</h1>
     </div>
-
-    <div class="row justify-content-center">
       <form class="row justify-content-center p-4" action="" id="searchform">
-        <input type="text" id="search" placeholder="Enter a search term">
-        <button class="btn btn-secondary" id="submit-btn">Search Giphy!</button>
-        <button class="btn btn-danger" id ="remove-btn">Remove Images</button>
+        <input class="col-12 col-md-4" type="text" id="search" placeholder="Enter a search term">
+        <button class="btn btn-lg btn-secondary col-12 offset-2 col-md-2" id="submit-btn">Search Giphy!</button>
+        <button class="btn btn-lg btn-danger col-12 col-md-2" id ="remove-btn">Remove Images</button>
       </form>
-    </div>
+
 
     <div class="container">
-      <div class="row justify-content-center lign-content-center" id="gif-gallery"></div>
-     
+      <div class="row" id="gif-gallery"></div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

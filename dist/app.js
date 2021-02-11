@@ -6,7 +6,6 @@ const removeBtn = document.querySelector('#remove-btn');
 async function getGifByInput(q) {
     try {
         const res = await axios.get(baseUrlGifs, { params: { api_key, q } });
-        console.log(res.data.data[0]);
         renderGif(res.data.data[0].images.downsized_large.url, res.data.data[0].title);
     } catch (e) {
         alert("MATCH NOT FOUND!");
@@ -19,13 +18,13 @@ function renderGif(gif, title) {
 
 function makeGifCard(gif, title) {
     const newCard = document.createElement('div');
-    newCard.classList.add("card", "col-12", "col-sm-4", "p-0");
+    newCard.classList.add("card", "col-6", "col-lg-3", "p-0");
     const newGif = document.createElement('img');
     newGif.classList.add("card-img-top");
     newGif.setAttribute("src", gif);
 
     const newCardBody = document.createElement('div');
-    newCardBody.classList.add("card-body", "bg-light", "d-flex", "flex-column");
+    newCardBody.classList.add("card-body", "bg-light");
     const newCardText = document.createElement("p");
     newCardText.classList.add("card-text", "mt-auto");
     newCardText.innerText = title;
@@ -46,7 +45,6 @@ submitBtn.addEventListener("click", function (e) {
     
     input.value = '';
 });
-
 
 removeBtn.addEventListener("click", function (e) {
     newCard.remove();
